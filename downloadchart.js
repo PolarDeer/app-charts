@@ -30,7 +30,9 @@ function createDownloadChart(data) {
         },
         interaction: {
             enabled: true
-        }
+        },
+        bindto: "#pie-chart"
+
     });
 
     setTimeout(() => {
