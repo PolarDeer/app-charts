@@ -4,6 +4,7 @@
 <head>
     <title>Final project</title>
     <link rel="stylesheet" href="billboard.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
 </head>
 
@@ -13,18 +14,32 @@
     <script src="table.js"></script>
     <script src="moneychart.js"></script>
     <script src="downloadchart.js"></script>
+    <script src="offlinejson.js"></script>
+
+    <div id="container">
+        <div id="main-table-div">
+            <div id="main-table-header"></div>
+            <table id="main-table"></table>
+        </div>
+        <div id="pie-chart"></div>
+        <div id="money-chart"></div>
+    </div>
     <script>
-        const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
+        /*
+            const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
 
-        fetch(link).then(function(response) {
-            response.json().then(function(data) {
+            fetch(link).then(function(response) {
+                response.json().then(function(data) {
+                    createTable(data);
+                    createDownloadChart(data);
+                    createMoneyChart(data);
 
-                createTable(data);
-                createDownloadChart(data);
-                createMoneyChart(data);
-
-            });
-        })
+                });
+            })
+        */
+        createTable(offlineData);
+        createDownloadChart(offlineData);
+        createMoneyChart(offlineData);
     </script>
 </body>
 
