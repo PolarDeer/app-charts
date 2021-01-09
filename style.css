@@ -3,6 +3,12 @@ body {
     color: white;
 }
 
+#container {
+    margin: 0;
+    width: 98vw;
+    height: 300vh;
+}
+
 #main-table {
     background-color: cadetblue;
     border-collapse: collapse;
@@ -25,4 +31,9 @@ tr:nth-child(odd) {
 
 tr:hover {
     background-color: lightskyblue;
+}
+
+#pie-chart {
+    height: 20%;
+    background-color: rgb(147, 173, 0);
 }
