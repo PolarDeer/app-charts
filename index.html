@@ -14,14 +14,15 @@
     <script src="moneychart.js"></script>
     <script src="downloadchart.js"></script>
     <script>
-        const link = "https://my.api.mockaroo.com/FP_Schema.json?key=67603560";
+        const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
 
         fetch(link).then(function(response) {
             response.json().then(function(data) {
 
                 createTable(data);
-                createMoneyChart(data);
                 createDownloadChart(data);
+                createMoneyChart(data);
+
             });
         })
     </script>

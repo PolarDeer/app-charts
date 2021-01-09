@@ -4,23 +4,37 @@ function createMoneyChart(data) {
             json: data,
             keys: {
                 x: "app_name",
-                value: ["downloads"]
+                value: ["profit"]
             },
             type: "bar",
+            colors: {
+                profit: "black"
+            },
+            names: {
+                profit: "Money earned (€)"
+            }
         },
         bar: {
             width: 7,
             padding: 7
+        },
+        background: {
+            color: "lightcyan"
         },
         axis: {
             x: {
                 type: "category",
             },
             y: {
-                max: 55000,
+                max: 60000,
                 min: 0,
                 padding: 0
             },
+            rotated: true
+        },
+        size: {
+            width: 1600,
+            height: 1500
         },
         grid: {
             y: {
@@ -34,6 +48,8 @@ function createMoneyChart(data) {
                     value: 40000
                 }, {
                     value: 50000
+                }, {
+                    value: 60000
                 }]
             },
             lines: {
