@@ -5,4 +5,24 @@ body {
 
 #main-table {
     background-color: cadetblue;
+    border-collapse: collapse;
+}
+
+th,
+tr,
+td {
+    border-collapse: collapse;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: lightseagreen;
+}
+
+tr:hover {
+    background-color: lightskyblue;
 }

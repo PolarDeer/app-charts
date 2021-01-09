@@ -56,6 +56,6 @@ function createMoneyChart(data) {
                 front: false
             }
         },
-        bindto: "#money-chart"
+        bindto: "#chart"
     });
 }

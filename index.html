@@ -18,7 +18,6 @@
 
     <div id="container">
         <div id="main-table-div">
-            <div id="main-table-header"></div>
             <table id="main-table"></table>
         </div>
         <div id="pie-chart"></div>
@@ -26,17 +25,17 @@
     </div>
     <script>
         /*
-            const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
+                    const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
 
-            fetch(link).then(function(response) {
-                response.json().then(function(data) {
-                    createTable(data);
-                    createDownloadChart(data);
-                    createMoneyChart(data);
+                    fetch(link).then(function(response) {
+                        response.json().then(function(data) {
+                            createTable(data);
+                            createDownloadChart(data);
+                            createMoneyChart(data);
 
-                });
-            })
-        */
+                        });
+                    })
+                */
         createTable(offlineData);
         createDownloadChart(offlineData);
         createMoneyChart(offlineData);
