@@ -19,8 +19,8 @@
         fetch(link).then(function(response) {
             response.json().then(function(data) {
 
-                //createTable(data);
-                //createMoneyChart(data);
+                createTable(data);
+                createMoneyChart(data);
                 createDownloadChart(data);
             });
         })
