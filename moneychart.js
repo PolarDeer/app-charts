@@ -4,11 +4,11 @@ function createMoneyChart(data) {
             json: data,
             keys: {
                 x: "app_name",
-                value: ["profit"]
+                value: ["profit"],
             },
             type: "bar",
             colors: {
-                profit: "lightcyan"
+                profit: "blue"
             },
             names: {
                 profit: "Money earned (€)"
@@ -18,22 +18,23 @@ function createMoneyChart(data) {
             width: 7,
             padding: 7
         },
-        background: {
-            color: "black"
-        },
+        background: {},
+
         axis: {
             x: {
                 type: "category",
+
             },
             y: {
                 max: 60000,
                 min: 0,
                 padding: 0
             },
-            rotated: true
+            rotated: true,
+
         },
         size: {
-            width: 1600,
+            width: 700,
             height: 1500
         },
         grid: {

@@ -20,9 +20,12 @@ function createDownloadChart(data) {
             ],
             "type": "pie"
         },
-        size: {},
         "legend": {
-            "show": true
+            "show": true,
+            contents: {
+                bindto: "#pie-legend",
+                template: "<span style='color:#fff;padding:10px; border-radius: 10px; margin: 3px; background-color:{=COLOR}'>{=TITLE}</span>"
+            }
         },
         "pie": {
             "label": {
@@ -39,11 +42,11 @@ function createDownloadChart(data) {
     setTimeout(() => {
         chart.load({
             "columns": [
-                [top5[0]['app_name'], parseInt(top5[0]['downloads'])],
-                [top5[1]['app_name'], parseInt(top5[1]['downloads'])],
-                [top5[2]['app_name'], parseInt(top5[2]['downloads'])],
-                [top5[3]['app_name'], parseInt(top5[3]['downloads'])],
-                [top5[4]['app_name'], parseInt(top5[4]['downloads'])],
+                [top5[0]['app_name'], top5[0]['downloads']],
+                [top5[1]['app_name'], top5[1]['downloads']],
+                [top5[2]['app_name'], top5[2]['downloads']],
+                [top5[3]['app_name'], top5[3]['downloads']],
+                [top5[4]['app_name'], top5[4]['downloads']],
             ],
         });
     }, creationDelay);
