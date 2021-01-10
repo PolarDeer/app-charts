@@ -8,7 +8,7 @@ function createMoneyChart(data) {
             },
             type: "bar",
             colors: {
-                profit: "black"
+                profit: "lightcyan"
             },
             names: {
                 profit: "Money earned (€)"
@@ -19,7 +19,7 @@ function createMoneyChart(data) {
             padding: 7
         },
         background: {
-            color: "lightcyan"
+            color: "black"
         },
         axis: {
             x: {

@@ -20,9 +20,7 @@ function createDownloadChart(data) {
             ],
             "type": "pie"
         },
-        size: {
-            width: 800,
-        },
+        size: {},
         "legend": {
             "show": true
         },
