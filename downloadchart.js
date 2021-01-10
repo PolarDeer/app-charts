@@ -24,7 +24,7 @@ function createDownloadChart(data) {
             "show": true,
             contents: {
                 bindto: "#pie-legend",
-                template: "<span style='color:#fff;padding:10px; border-radius: 10px; margin: 3px; background-color:{=COLOR}'>{=TITLE}</span>"
+                template: "<span style='color:#fff;text-align:center;padding:10px; border-radius: 10px; margin: 3px; background-color:{=COLOR}'>{=TITLE}</span>"
             }
         },
         "pie": {
@@ -50,5 +50,4 @@ function createDownloadChart(data) {
             ],
         });
     }, creationDelay);
-
 }

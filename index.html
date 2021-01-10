@@ -3,9 +3,11 @@
 
 <head>
     <title>Final project</title>
-    <link rel="stylesheet" href="billboard.css">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="billboard.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
 </head>
 
 <body id="body">
@@ -17,36 +19,43 @@
     <script src="offlinejson.js"></script>
 
     <div id="container">
-        <div id="main-table-div">
-            <table id="main-table"></table>
-        </div>
-        <div id="pie-chart-div">
-            <div id="pie-chart"></div>
-            <div id="pie-legend"></div>
-        </div>
-        <div id="money-chart-div">
-            <div id="money-chart"></div>
-
+        <div id="grid">
+            <div id="main-table-div">
+                <h2>Data concerning mobile applications created by one developer</h2>
+                <div id="main-table-holder">
+                    <table id="main-table"></table>
+                </div>
+            </div>
+            <div id="pie-chart-div">
+                <h2>TOP 5 downloads</h2>
+                <div id="pie-holder">
+                    <div id="pie-chart"></div>
+                    <div id="pie-legend"></div>
+                </div>
+            </div>
+            <div id="money-chart-div">
+                <h2>TOP 5 most profitable apps</h2>
+                <div id="money-chart-holder">
+                    <div id="money-chart"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
         // WARNING, DO NOT UNCOMMENT NOR DELETE. For testing purposes, use only offline json data.
-        /*
-            const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
 
-            fetch(link).then(function(response) {
-                response.json().then(function(data) {
-                    createTable(data);
-                    createDownloadChart(data);
-                    createMoneyChart(data);
+        const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
 
-                });
-            })
-        */
+        fetch(link).then(function(response) {
+            response.json().then(function(data) {
+                createTable(data);
+                createDownloadChart(data);
+                createMoneyChart(data);
 
-        createTable(offlineData);
-        createDownloadChart(offlineData);
-        createMoneyChart(offlineData);
+            });
+        }).catch(function(error) {
+            console.log(error)
+        })
     </script>
 </body>
 

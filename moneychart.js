@@ -1,62 +1,52 @@
 function createMoneyChart(data) {
+    dataSortedByProfit = data.slice(0).sort(function(a, b) {
+        return b['profit'] - a['profit']
+    })
+    topTenAppsByProfit = dataSortedByProfit.slice(0, 5)
     const chart = bb.generate({
         data: {
-            json: data,
+            json: topTenAppsByProfit,
             keys: {
                 x: "app_name",
                 value: ["profit"],
             },
             type: "bar",
             colors: {
-                profit: "blue"
+                profit: "#FFAB00",
+                text: "black"
             },
             names: {
                 profit: "Money earned (€)"
+            },
+            labels: {
+                show: true,
+                colors: "black",
+                bindto: "#money-chart-labels"
+
             }
         },
         bar: {
-            width: 7,
-            padding: 7
+            width: 35,
         },
         background: {},
 
         axis: {
             x: {
                 type: "category",
-
             },
             y: {
-                max: 60000,
+                max: 54000,
                 min: 0,
                 padding: 0
             },
-            rotated: true,
+            rotated: false,
 
         },
         size: {
-            width: 700,
-            height: 1500
+            width: 450,
+            height: 350
         },
-        grid: {
-            y: {
-                lines: [{
-                    value: 10000
-                }, {
-                    value: 20000
-                }, {
-                    value: 30000
-                }, {
-                    value: 40000
-                }, {
-                    value: 50000
-                }, {
-                    value: 60000
-                }]
-            },
-            lines: {
-                front: false
-            }
-        },
+
         bindto: "#money-chart"
     });
 }
