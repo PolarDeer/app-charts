@@ -43,22 +43,23 @@
     </div>
     <script>
         // WARNING, DO NOT UNCOMMENT NOR DELETE. For testing purposes, use only offline json data.
-        /*
         const link = "https://my.api.mockaroo.com/users.json?key=7d7d6ae0";
 
         fetch(link).then(function(response) {
-            response.json().then(function(data) {
-                createTable(data);
-                createDownloadChart(data);
-                createMoneyChart(data);
+                response.json().then(function(data) {
+                    createTable(data);
+                    createDownloadChart(data);
+                    createMoneyChart(data);
 
-            });
-        }).catch(function(error) {
-            console.log(error)
-        })*/
-        createTable(offlineData);
-        createDownloadChart(offlineData);
-        createMoneyChart(offlineData);
+                });
+            }).catch(function(error) {
+                console.log(error)
+            })
+            /*
+            createTable(offlineData);
+            createDownloadChart(offlineData);
+            createMoneyChart(offlineData);
+            */
     </script>
 </body>
 
